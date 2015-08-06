@@ -4,7 +4,7 @@ EXTIFACE=${EXTIFACE:-eth0}
 INTIFACE=${INTIFACE:-docker0}
 
 grep -e "^EXTIFACE=" /etc/default/linux-igd || \
-  echo "EXTIFACE=$(EXTIFACE)" >> /etc/default/linux-igd
+  echo "EXTIFACE=${EXTIFACE}" >> /etc/default/linux-igd
 
 grep -e "^INTIFACE=" /etc/default/linux-igd || \
   echo "INTIFACE=${INTIFACE}" >> /etc/default/linux-igd
